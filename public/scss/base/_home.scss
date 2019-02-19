@@ -1,0 +1,26 @@
+body {
+  background-color: $color-grey-light-1;
+  border: 3px solid rebeccapurple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 90vh;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  padding: 3rem;
+}
+
+img {
+  margin-bottom: 3rem;
+}
+
+h1, p {
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.container {
+  column-count: 4;
+  border: 3px solid rgb(126, 167, 12);
+  border-radius: 22px;
+  padding: 2rem;
+}

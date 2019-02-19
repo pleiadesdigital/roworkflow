@@ -7,6 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
+var babel = require('gulp-babel');
 
 
 /* FILE PATHS */
@@ -45,7 +46,10 @@ gulp.task('scripts', function(){
       this.emit('end');
     }))
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    .pipe(babel({
+      presets: ['es2015']
+    }))
+    // .pipe(uglify())
     .pipe(concat('app.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(DIST_PATH))
